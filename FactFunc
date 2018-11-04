@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void factorial(int *fact,int N);
+
+int main(){
+
+	int N,fact=1;
+	int i;
+
+
+	printf("Enter N\n");
+	scanf("%d",&N);
+
+
+	factorial(&fact,N);
+
+	printf("Factorial=%d",fact);
+
+
+	system("pause");
+}
+
+void factorial(int *fact,int N){
+
+	int i;
+
+
+	for(i=1;i<N+1;i++)
+	{
+		*fact=*fact*i;
+	}
+}
